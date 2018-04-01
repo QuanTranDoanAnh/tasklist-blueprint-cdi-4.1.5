@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1522604713360
+Build-Jdk: 1.8.0_131
+Built-By: QuanTDA1
+Bundle-Blueprint: OSGI-INF/blueprint/autowire.xml
+Bundle-Description: Tasklist CDI Persistence
+Bundle-ManifestVersion: 2
+Bundle-Name: Tasklist CDI Persistence
+Bundle-SymbolicName: vn.quantda.tasklist.cdi.tasklist-cdi-persistence
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Service: vn.quantda.tasklist.cdi.model.TaskService;service.export
+ ed.interfaces=*;osgi.service.blueprint.compname=taskServiceImpl
+Import-Package: javax.annotation,javax.inject,javax.persistence;version=
+ "[2.1,3)",javax.persistence.criteria;version="[2.1,3)",javax.transactio
+ n;version="[1.2,2)",org.ops4j.pax.cdi.api;version="[0.11,1)";resolution
+ :=optional,org.osgi.service.blueprint;version="[1.0.0,2.0.0)",org.slf4j
+ ;version="[1.7,2)",vn.quantda.tasklist.cdi.model;version="[1.0,2)",org.
+ hibernate.proxy,javassist.util.proxy
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-3.3.0.201609221906
